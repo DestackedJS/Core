@@ -4,4 +4,4 @@
 
 import Fireblaze from './provider';
 
-export { Fireblaze };
+export default Fireblaze;

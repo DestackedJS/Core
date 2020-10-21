@@ -41,5 +41,8 @@
     "bugs": {
         "url": "https://github.com/Abruptive/Fireblaze-Core/issues"
     },
-    "homepage": "https://github.com/Abruptive/Fireblaze-Core#readme"
+    "homepage": "https://github.com/Abruptive/Fireblaze-Core#readme",
+    "dependencies": {
+        "compose-function": "^3.0.3"
+    }
 }
