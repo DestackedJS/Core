@@ -1,10 +1,10 @@
 import compose from 'compose-function';
 
-import { FireblazeInterface } from '@fireblaze/interface';
-import { FireblazeDatabase } from '@fireblaze/database';
-import { FireblazeMembers } from '@fireblaze/members';
-import { FireblazeMarketing } from '@fireblaze/marketing';
-import { FireblazeAffiliates } from '@fireblaze/affiliates';
+import FireblazeInterface from '@fireblaze/interface/provider';
+import FireblazeDatabase from '@fireblaze/database/provider';
+import FireblazeMembers from '@fireblaze/members/provider';
+import FireblazeMarketing from '@fireblaze/marketing/provider';
+import FireblazeAffiliates from '@fireblaze/affiliates/provider';
 
 const Fireblaze = (props) => props.children;
 
