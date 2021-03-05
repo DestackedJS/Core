@@ -54,9 +54,9 @@ const withFireblazeAffiliates = (Component) => (props) =>
     );
 
 export default compose(
-    withFireblazeInterface,
     withFireblazeDatabase,
     withFireblazeMembers,
+    withFireblazeInterface,
     withFireblazeAffiliates,
     withFireblazeMarketing
 )(Fireblaze);
