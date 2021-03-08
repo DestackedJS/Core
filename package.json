@@ -1,12 +1,15 @@
 {
-    "name": "@fireblaze/core",
-    "version": "0.0.158",
+    "name": "@destacked/core",
+    "version": "0.1.0",
     "description": "",
     "main": "index.js",
     "scripts": {
         "dev": "next dev",
         "build": "next build",
         "start": "next start"
+    },
+    "dependencies": {
+        "compose-function": "^3.0.3"
     },
     "peerDependencies": {
         "next": "^9.5.5",
@@ -27,22 +30,16 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Abruptive/Fireblaze-Core.git"
+        "url": "git+https://github.com/DestackedJS/Core"
     },
     "keywords": [
-        "fireblaze",
-        "core",
-        "ui",
-        "abruptive",
-        "boilerplate"
+        "destacked",
+        "core"
     ],
     "author": "Abruptive",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/Abruptive/Fireblaze-Core/issues"
+        "url": "https://github.com/DestackedJS/Core/issues"
     },
-    "homepage": "https://github.com/Abruptive/Fireblaze-Core#readme",
-    "dependencies": {
-        "compose-function": "^3.0.3"
-    }
+    "homepage": "https://github.com/DestackedJS/Core#readme"
 }
