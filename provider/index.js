@@ -1,62 +1,91 @@
 import compose from 'compose-function';
 
-import FireblazeInterface from '@fireblaze/interface/provider';
-import FireblazeDatabase from '@fireblaze/database/provider';
-import FireblazeMembers from '@fireblaze/members/provider';
-import FireblazeMarketing from '@fireblaze/marketing/provider';
-import FireblazeAffiliates from '@fireblaze/affiliates/provider';
+/**
+ * Import the module extensions.
+ */
 
-const Fireblaze = (props) => props.children;
+import withDestackedDatabase from './wrappers/withDestackedDatabase';
+import withDestackedMembers from './wrappers/withDestackedMembers';
+import withDestackedInterface from './wrappers/withDestackedInterface';
+import withDestackedAffiliates from './wrappers/withDestackedAffiliates';
+import withDestackedMarketing from './wrappers/withDestackedMarketing';
 
-const withFireblazeInterface = (Component) => (props) =>
-    props.interface ? (
-        <FireblazeInterface args={props.interface}>
-            <Component {...props} />
-        </FireblazeInterface>
-    ) : (
-        <Component {...props} />
-    );
+/**
+ * Create the core component.
+ *
+ * @param {*} props
+ * @returns
+ */
 
-const withFireblazeDatabase = (Component) => (props) =>
-    props.database ? (
-        <FireblazeDatabase args={props.database}>
-            <Component {...props} />
-        </FireblazeDatabase>
-    ) : (
-        <Component {...props} />
-    );
+const Destacked = (props) => props.children;
 
-const withFireblazeMembers = (Component) => (props) =>
-    props.members ? (
-        <FireblazeMembers args={props.members}>
-            <Component {...props} />
-        </FireblazeMembers>
-    ) : (
-        <Component {...props} />
-    );
-
-const withFireblazeMarketing = (Component) => (props) =>
-    props.marketing ? (
-        <FireblazeMarketing args={props.marketing}>
-            <Component {...props} />
-        </FireblazeMarketing>
-    ) : (
-        <Component {...props} />
-    );
-
-const withFireblazeAffiliates = (Component) => (props) =>
-    props.affiliates ? (
-        <FireblazeAffiliates args={props.affiliates}>
-            <Component {...props} />
-        </FireblazeAffiliates>
-    ) : (
-        <Component {...props} />
-    );
+/**
+ * Compose and export the Destacked core.
+ */
 
 export default compose(
-    withFireblazeDatabase,
-    withFireblazeMembers,
-    withFireblazeInterface,
-    withFireblazeAffiliates,
-    withFireblazeMarketing
-)(Fireblaze);
+    /**
+     * Chain "Destacked Database" providers.
+     */
+
+    (chain) => {
+        try {
+            require.resolve('@fireblaze/database');
+            return withDestackedDatabase(chain);
+        } catch (e) {
+            return chain;
+        }
+    },
+
+    /**
+     * Chain "Destacked Members" providers.
+     */
+
+    (chain) => {
+        try {
+            require.resolve('@fireblaze/members');
+            return withDestackedMembers(chain);
+        } catch (e) {
+            return chain;
+        }
+    },
+
+    /**
+     * Chain "Destacked Interface" providers.
+     */
+
+    (chain) => {
+        try {
+            require.resolve('@fireblaze/interface');
+            return withDestackedInterface(chain);
+        } catch (e) {
+            return chain;
+        }
+    },
+
+    /**
+     * Chain "Destacked Affiliates" providers.
+     */
+
+    (chain) => {
+        try {
+            require.resolve('@fireblaze/affiliates');
+            return withDestackedAffiliates(chain);
+        } catch (e) {
+            return chain;
+        }
+    },
+
+    /**
+     * Chain "Destacked Marketing" providers.
+     */
+
+    (chain) => {
+        try {
+            require.resolve('@fireblaze/marketing');
+            return withDestackedMarketing(chain);
+        } catch (e) {
+            return chain;
+        }
+    }
+)(Destacked);

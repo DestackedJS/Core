@@ -2,6 +2,6 @@
  * Provider
  */
 
-import Fireblaze from './provider';
+import Destacked from './provider';
 
-export default Fireblaze;
+export default Destacked;
