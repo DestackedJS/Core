@@ -69,7 +69,7 @@ export default compose(
 
     (chain) => {
         try {
-            require.resolve('@fireblaze/affiliates');
+            require.resolve('@destacked/affiliates');
             return withDestackedAffiliates(chain);
         } catch (e) {
             return chain;

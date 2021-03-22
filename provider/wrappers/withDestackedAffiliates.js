@@ -1,4 +1,4 @@
-import FireblazeAffiliates from '@fireblaze/affiliates/provider';
+import FireblazeAffiliates from '@destacked/affiliates/provider';
 
 const withDestackedAffiliates = (Component) => (props) =>
     props.affiliates ? (
