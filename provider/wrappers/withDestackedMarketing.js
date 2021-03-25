@@ -1,10 +1,10 @@
-import FireblazeMarketing from '@destacked/marketing/provider';
+import DestackedMarketing from '@destacked/marketing/provider';
 
 const withDestackedMarketing = (Component) => (props) =>
     props.marketing ? (
-        <FireblazeMarketing args={props.marketing}>
+        <DestackedMarketing args={props.marketing}>
             <Component {...props} />
-        </FireblazeMarketing>
+        </DestackedMarketing>
     ) : (
         <Component {...props} />
     );
