@@ -82,7 +82,7 @@ export default compose(
 
     (chain) => {
         try {
-            require.resolve('@fireblaze/marketing');
+            require.resolve('@destacked/marketing');
             return withDestackedMarketing(chain);
         } catch (e) {
             return chain;

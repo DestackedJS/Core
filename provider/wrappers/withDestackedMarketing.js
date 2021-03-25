@@ -1,4 +1,4 @@
-import FireblazeMarketing from '@fireblaze/marketing/provider';
+import FireblazeMarketing from '@destacked/marketing/provider';
 
 const withDestackedMarketing = (Component) => (props) =>
     props.marketing ? (
