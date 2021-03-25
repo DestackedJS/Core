@@ -1,10 +1,10 @@
-import FireblazeDatabase from '@fireblaze/database/provider';
+import DestackedDatabase from '@destacked/database/provider';
 
 const withDestackedDatabase = (Component) => (props) =>
     props.database ? (
-        <FireblazeDatabase args={props.database}>
+        <DestackedDatabase args={props.database}>
             <Component {...props} />
-        </FireblazeDatabase>
+        </DestackedDatabase>
     ) : (
         <Component {...props} />
     );

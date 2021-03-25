@@ -30,7 +30,7 @@ export default compose(
 
     (chain) => {
         try {
-            require.resolve('@fireblaze/database');
+            require.resolve('@destacked/database');
             return withDestackedDatabase(chain);
         } catch (e) {
             return chain;
