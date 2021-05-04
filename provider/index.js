@@ -25,81 +25,10 @@ const Destacked = (props) => props.children;
  */
 
 export default compose(
-    /**
-     * Chain "Destacked Database" providers.
-     */
-
-    (chain) => {
-        try {
-            require.resolve('@destacked/database');
-            return withDestackedDatabase(chain);
-        } catch (e) {
-            return chain;
-        }
-    },
-
-    /**
-     * Chain "Destacked Members" providers.
-     */
-
-    (chain) => {
-        try {
-            require.resolve('@destacked/members');
-            return withDestackedMembers(chain);
-        } catch (e) {
-            return chain;
-        }
-    },
-
-    /**
-     * Chain "Destacked Interface" providers.
-     */
-
-    (chain) => {
-        try {
-            require.resolve('@destacked/interface');
-            return withDestackedInterface(chain);
-        } catch (e) {
-            return chain;
-        }
-    },
-
-    /**
-     * Chain "Destacked Affiliates" providers.
-     */
-
-    (chain) => {
-        try {
-            require.resolve('@destacked/affiliates');
-            return withDestackedAffiliates(chain);
-        } catch (e) {
-            return chain;
-        }
-    },
-
-    /**
-     * Chain "Destacked Marketing" providers.
-     */
-
-    (chain) => {
-        try {
-            require.resolve('@destacked/marketing');
-            return withDestackedMarketing(chain);
-        } catch (e) {
-            return chain;
-        }
-    },
-
-    /**
-     * Chain "Destacked Pay" providers.
-     */
-
-    (chain) => {
-        try {
-            require.resolve('@destacked/pay');
-            return withDestackedPay(chain);
-        } catch (e) {
-            return chain;
-        }
-    }
+    withDestackedDatabase,
+    withDestackedMembers,
+    withDestackedInterface,
+    withDestackedAffiliates,
+    withDestackedMarketing,
+    withDestackedPay
 )(Destacked);
