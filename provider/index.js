@@ -1,34 +1,37 @@
-import compose from 'compose-function';
+import { useContext, createContext } from 'react';
+
+import client from './client';
 
 /**
- * Import the module extensions.
+ *
  */
 
-import withDestackedDatabase from './wrappers/withDestackedDatabase';
-import withDestackedMembers from './wrappers/withDestackedMembers';
-import withDestackedInterface from './wrappers/withDestackedInterface';
-import withDestackedAffiliates from './wrappers/withDestackedAffiliates';
-import withDestackedMarketing from './wrappers/withDestackedMarketing';
-import withDestackedPay from './wrappers/withDestackedPay';
+const DestackedContext = createContext();
 
 /**
- * Create the core component.
  *
- * @param {*} props
+ * @param {*} param0
  * @returns
  */
 
-const Destacked = (props) => props.children;
+const DestackedCore = ({ args, children }) => (
+    <DestackedContext.Provider value={client({ args })}>
+        {children}
+    </DestackedContext.Provider>
+);
 
 /**
- * Compose and export the Destacked core.
+ *
+ * @returns
  */
 
-export default compose(
-    withDestackedDatabase,
-    withDestackedMembers,
-    withDestackedInterface,
-    withDestackedAffiliates,
-    withDestackedMarketing,
-    withDestackedPay
-)(Destacked);
+const useDestackedCore = () => {
+    return useContext(DestackedContext);
+};
+
+/**
+ * Compose and export the Destacked core wrappers.
+ */
+
+export default DestackedCore;
+export { useDestackedCore };
