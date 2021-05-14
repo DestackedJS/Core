@@ -1,6 +1,6 @@
 {
     "name": "@destacked/core",
-    "version": "0.1.60",
+    "version": "0.1.61",
     "description": "",
     "private": false,
     "main": "index.js",
