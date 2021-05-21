@@ -1,8 +1,13 @@
 # Table of contents
 
-* [👋 Getting Started](README.md)
+* [Destacked Core](README.md)
 
 ## 👋 Getting Started
 
-* [Installing the Core](getting-started/install.md)
+* [Setup](getting-started/install.md)
+
+## 📖 Guidelines
+
+* [Modules](guidelines/modules.md)
+* [Providers](guidelines/providers.md)
 
