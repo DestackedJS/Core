@@ -1,2 +1,6 @@
-# Installing the Core
+---
+description: Work in Progress
+---
+
+# Setup
 
