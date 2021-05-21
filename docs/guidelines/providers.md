@@ -38,9 +38,7 @@ const ExampleContext = createContext();
 
 const ExampleProvider = ({ args, children }) => (
     <ExampleContext.Provider value={client(args)}>
-        <ReferrerProvider>
-            <CommissionsProvider>{children}</CommissionsProvider>
-        </ReferrerProvider>
+        {children}
     </ExampleContext.Provider>
 );
 
@@ -54,9 +52,9 @@ const withExample =
     (Component) =>
     ({ provider, ...props }) =>
         (
-            <DestackedAffiliates args={provider}>
+            <ExampleProvider args={provider}>
                 <Component {...props} />
-            </DestackedAffiliates>
+            </ExampleProvider>
         );
 
 /**
@@ -81,11 +79,7 @@ const useExample = () => {
  * Export the components.
  */
 
-export {
-    ExampleProvider
-    withExample,
-    useExample,
-};
+export { ExampleProvider, withExample, useExample };
 
 ```
 {% endcode %}
