@@ -125,6 +125,7 @@ Then, in your component body, call the hook and only extract the values or funct
 
 #### Example
 
+{% code title="components/Example/index.js" %}
 ```javascript
 import { withExample, useExample } from './example/provider';
 
@@ -141,4 +142,5 @@ const Component = () => {
 export default withExample(Component);
 
 ```
+{% endcode %}
 
