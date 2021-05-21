@@ -18,9 +18,7 @@ const DestackedCoreContext = createContext();
 
 const DestackedCore = ({ args, children }) => (
     <DestackedCoreContext.Provider value={client(args)}>
-        <ReferrerProvider>
-            <CommissionsProvider>{children}</CommissionsProvider>
-        </ReferrerProvider>
+        {children}
     </DestackedCoreContext.Provider>
 );
 
