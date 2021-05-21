@@ -1,6 +1,6 @@
 {
     "name": "@destacked/core",
-    "version": "0.1.72",
+    "version": "0.1.73",
     "description": "",
     "private": false,
     "main": "index.js",
@@ -15,12 +15,12 @@
     "peerDependencies": {
         "classnames": "^2.3.1",
         "lodash": "^4.17.21",
-        "next": "^10.2.1",
-        "next-transpile-modules": "^7.1.2",
+        "next": "^10.2.2",
+        "next-transpile-modules": "^7.2.0",
         "node-sass": "^6.0.0",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
-        "sass": "^1.32.13"
+        "sass": "^1.33.0"
     },
     "devDependencies": {
         "@babel/cli": "^7.14.3",
