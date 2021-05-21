@@ -22,6 +22,8 @@ To keep things easy, integrate the code below and run a search and replace for t
 ```javascript
 import { useContext, createContext } from 'react';
 
+import client from './client';
+
 /**
  * Create the context object.
  *
