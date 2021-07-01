@@ -3,8 +3,8 @@ import { withDestackedDatabase } from '@destacked/database';
 import { withDestackedMembers } from '@destacked/members';
 import { withDestackedInterface } from '@destacked/interface';
 import { withDestackedBlocks } from '@destacked/blocks';
-import { withDestackedAffiliates } from '@destacked/affiliates';
 import { withDestackedMarketing } from '@destacked/marketing';
+import { withDestackedAffiliates } from '@destacked/affiliates';
 import { withDestackedSupport } from '@destacked/support';
 import { withDestackedPay } from '@destacked/pay';
 import { withDestackedGamification } from '@destacked/gamification';
@@ -28,8 +28,8 @@ export default compose(
     withDestackedMembers,
     withDestackedInterface,
     withDestackedBlocks,
-    withDestackedAffiliates,
     withDestackedMarketing,
+    withDestackedAffiliates,
     withDestackedSupport,
     withDestackedPay,
     withDestackedGamification
