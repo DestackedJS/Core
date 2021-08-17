@@ -1,6 +1,6 @@
 {
     "name": "@destacked/core",
-    "version": "0.1.159",
+    "version": "0.1.160",
     "description": "",
     "private": false,
     "main": "index.js",
@@ -17,8 +17,8 @@
         "@destacked/blocks": "^1.1.319",
         "@destacked/database": "^0.0.142",
         "@destacked/gamification": "^0.0.125",
-        "@destacked/helpers": "^1.1.99",
-        "@destacked/interface": "^1.1.120",
+        "@destacked/helpers": "^1.1.100",
+        "@destacked/interface": "^1.1.121",
         "@destacked/marketing": "^0.0.301",
         "@destacked/members": "^1.1.115",
         "@destacked/pay": "^0.0.124",
@@ -30,7 +30,7 @@
         "node-sass": "^6.0.1",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
-        "sass": "^1.37.5"
+        "sass": "^1.38.0"
     },
     "devDependencies": {
         "@babel/cli": "^7.14.8",
