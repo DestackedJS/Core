@@ -1,6 +1,6 @@
 {
     "name": "@destacked/core",
-    "version": "0.1.173",
+    "version": "0.1.174",
     "description": "",
     "private": false,
     "main": "index.js",
@@ -17,8 +17,8 @@
         "@destacked/blocks": "^1.1.332",
         "@destacked/database": "^0.0.154",
         "@destacked/gamification": "^0.0.137",
-        "@destacked/helpers": "^1.1.112",
-        "@destacked/interface": "^1.1.145",
+        "@destacked/helpers": "^1.1.113",
+        "@destacked/interface": "^1.1.146",
         "@destacked/marketing": "^0.0.313",
         "@destacked/members": "^1.1.128",
         "@destacked/pay": "^0.0.136",
