@@ -1,5 +1,5 @@
 /**
- * Create the provider value as a client function.
+ * Create the provider value as a client hook.
  *
  * @see    https://reactjs.org/docs/context.html#contextprovider
  * @param  {Object} args Parameters passed to the provider via the args prop.
