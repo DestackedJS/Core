@@ -1,7 +1,7 @@
 ---
 description: >-
-  Build advanced components and modules that share variables and functions
-  through hooks by using a structured version of React Context Providers.
+    Build advanced components and modules that share variables and functions
+    through hooks by using a structured version of React Context Providers.
 ---
 
 # Providers
@@ -19,6 +19,7 @@ To keep things easy, integrate the code below and run a search and replace for t
 {% tabs %}
 {% tab title="Provider" %}
 {% code title="components/Example/provider/index.js" %}
+
 ```javascript
 import compose from 'compose-function';
 
@@ -85,11 +86,13 @@ const useExample = () => {
 
 export { ExampleProvider, withExample, useExample };
 ```
+
 {% endcode %}
 {% endtab %}
 
 {% tab title="Client" %}
 {% code title="components/Example/provider/client/index.js" %}
+
 ```javascript
 /**
  * Create the provider value as a client hook.
@@ -105,6 +108,7 @@ const useClient = (args) => {
 
 export default useClient;
 ```
+
 {% endcode %}
 {% endtab %}
 {% endtabs %}
@@ -130,6 +134,7 @@ Every component called inside your Example component will also have access to th
 ### Example
 
 {% code title="components/Example/index.js" %}
+
 ```javascript
 import { withExample, useExample } from './provider';
 
@@ -141,5 +146,5 @@ const Example = () => {
 
 export default compose(withExample)(Example);
 ```
-{% endcode %}
 
+{% endcode %}

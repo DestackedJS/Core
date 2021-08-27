@@ -1,6 +1,6 @@
 import { useContext, createContext } from 'react';
 
-import client from './client';
+import useClient from './client';
 
 /**
  * Create the context object.
@@ -17,7 +17,7 @@ const DestackedCoreContext = createContext();
  */
 
 const DestackedCore = ({ args, children }) => (
-    <DestackedCoreContext.Provider value={client(args)}>
+    <DestackedCoreContext.Provider value={useClient(args)}>
         {children}
     </DestackedCoreContext.Provider>
 );
